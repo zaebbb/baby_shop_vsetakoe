@@ -1,0 +1,278 @@
+@import url('./fonts/FontAwesome.otf');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.widthCheck{
+    padding: 10px 50px;
+}
+body{
+    background: #eee;
+}
+body header{
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img{
+    width: 100px;
+} 
+header .upMenu{
+    display: flex;
+}
+header .upMenu li{
+    position: relative;
+}
+header .upMenu li a.mainLink{
+    position: relative;
+    margin-left: 30px;
+    text-transform: uppercase;
+    color:#6F1E51;
+    font-size: 18px;
+    transition: .5s;
+}
+header .upMenu li a.mainLink:hover{
+    color: #991E92;
+}
+header .upMenu li .downMenu {
+    position: absolute;
+   background: rgba(0,0,0,0.8);
+   padding: 15px 20px;
+   display: flex;
+   left: 50%;
+   transform: translateX(-42%);
+   width: 100%;
+   flex-direction: column;
+   border-radius: 6px;
+   margin-top: 20px;
+   opacity: 0;
+   visibility: hidden;
+   transition: .5s;
+}
+header .upMenu li .downMenu a{
+    color: #fff;
+    font-size: 18px;
+    transition: .5s;
+    margin-bottom: 15px;
+}
+header .upMenu li .downMenu a:hover{
+    color: pink;
+}
+header .upMenu li:hover .downMenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.sidebar{
+    margin-left: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.sidebar form input{
+    width: 100%;
+}
+.head_content{
+    color:#9980FA;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+.head_content img{
+    width: 30px;
+    margin-left: 30px;
+}
+/* cards */
+.cardsNews{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cardsNews .cardNew{
+    width: 23% auto;
+    margin-right: 25px;
+}
+.cardsNews .cardNew img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.cardsNews .cardNew h3{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: pink;
+}
+.cardsNews .cardNew p.newPrice,
+.cardsNews .cardNew p.descr,
+.cardsNews .cardNew p.price{
+    padding: 15px 15px 10px 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.cardsNews .cardNew p.descr{
+    padding: 15px 5px 5px 15px;
+    font-weight: 400;
+}
+.cardsNews .cardNew p.sale{
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.cardsNews .cardNew p.newPrice{
+    font-weight: 700;
+    margin-top: 0;
+    padding-top: 0;
+}
+.cardsNews .cardNew a{
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    margin-top: 10px;
+    color: pink;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid pink;
+    transition: .5s;
+    font-weight: 700;
+}
+.cardsNews .cardNew a:hover{
+    background: pink;
+    color: #fff;
+}
+.sidebar_head{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color:#9980FA
+}
+.sidebar form {
+    margin-top: 20px;
+}
+.sidebar form select,
+.sidebar form textarea,
+.sidebar form input{
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 25px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid pink;
+    background: transparent;
+    font-size: 18px;
+    color: #202020;
+    -webkit-appearance: none;
+}
+.sidebar form textarea{
+    padding-top: 15px;
+    resize: none;
+    height: 150px;
+}
+.sidebar form input[type="date"],
+.sidebar form select,
+.sidebar form textarea::placeholder,
+.sidebar form input::placeholder{
+    color: pink;
+}
+.sidebar form input[type="submit"]{
+    text-align: center;
+    padding-left: 0;
+    background: pink;
+    color: #fff;
+}
+.sidebar .galleryImage{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .galleryImage .galleryFor{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar .galleryImage .galleryFor img{
+    width: 31%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.sidebarHr{
+    border: 2px solid #202020;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.sidebarButtons{
+    display: flex;
+    flex-direction: column;
+}
+.sidebarButtons button{
+    height: 100%;
+    border: 2px solid pink;
+    height: 40px;
+    font-size: 20px;
+    color: pink;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+.sidebarButtons button:hover{
+    background: pink;
+    color: #fff;
+}
+
+/* footer */
+footer{
+    padding: 20px 50px;
+    background: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .arrowTop{
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+footer .copyright{
+    color: #fff;
+    font-size: 20px;
+}
+.logoFoot{
+    color: pink;
+}
+.socialFoot ul{
+    display: flex;
+}
+.socialFoot ul li{
+    margin-right: 30px;
+}
+.socialFoot ul li a{
+    color: #fff;
+    font-size: 20px;
+    transition: .5s;
+}
+.socialFoot ul li a:hover{
+    color: pink;
+}
